@@ -1,0 +1,33 @@
+{
+    "config": {
+        "config": {
+            "liteservers": [
+                {
+                    "ip": -1303404396,
+                    "port": "16632",
+                    "id": {
+                        "@type": "pub.ed25519",
+                        "key": "1VfWJaA/r8BNqx81PSuTor+dhpAtWfGEoRD7cISS5co="
+                    }
+                }
+            ],
+            "validator": {
+                "@type": "validator.config.global",
+                "zero_state": {
+                    "workchain": -1,
+                    "shard": -9223372036854775808,
+                    "seqno": 0,
+                    "file_hash": "69JDxeiJWi1zTNT7SS3d0UpbGanxnazZHmgmduoyujg=",
+                    "root_hash": "wAZzMiUuEHwKD0AYZRlEd0CJdEp/Ra5ZnyfjUz94irE="
+                }
+            }
+        },
+        "blockchain_name": "tcf-chain",
+        "use_callbacks_for_network": false,
+        "ignore_cache": false
+    },
+    "keystore_type": {
+        "@type": "keyStoreTypeDirectory",
+        "directory": "./test.keys"
+    }
+}

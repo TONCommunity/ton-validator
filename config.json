@@ -1,0 +1,17 @@
+{
+	"fift-bin": "/ton/bin/fift",
+	"fift-path": "/ton/fift/lib/",
+	"lite-client": "/ton/bin/lite-client",
+	"db-file": "./ton.db",
+	"tonlib-config": "/ton/work/tonlib.config.json",
+	"lite-client-config": "/ton/work/ton-lite-client-test1.config.json",
+	"validator-console": "/ton/bin/validator-engine-console",
+	"max-factor": 30,
+	"stake-amount": 20001,
+	"wallet-fif": "/ton/smartcont/wallet.fif",
+	"recover-fif": "/ton/smartcont/recover-stake.fif",
+	"validator-elect-req-fif": "/ton/smartcont/validator-elect-req.fif",
+	"validator-elect-signed-fif": "/ton/smartcont/validator-elect-signed.fif",
+	"verbose": false,
+	"verbose-tonlib": 0
+}
