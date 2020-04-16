@@ -6,27 +6,27 @@ Swiss Army Knife for TON Validator Activities
 ### Create working folder
 ```
 mkdir validator-conf
+cd validator-conf
 ```
-
-### Init database
-```
-cat ~/go/src/github.com/mercuryoio/ton-validator/database/tables.sql| sqlite3 ton.db
-```
-
 ### Install ton-cli
 ```
 go get -u github.com/mercuryoio/ton-validator/cmd/ton-cli
 ```
+### Init database
+```
+cat $GOPATH/src/github.com/mercuryoio/ton-validator/database/tables.sql| sqlite3 ton.db
+```
 
 ### Add wallet
+Now you need create folder for wallets and copy your private keys .pk and .addr files:
 ```
-cd validator-conf
 mkdir wallets
-cp wallet.pk wallets
+cp wallet.pk wallet.addr wallets
 ton-cli wallet add <wallet_address> <wallet_file_path> # e.g. kf92ZppODxXZW04JKSlQSMMKn28KAfBqMVF6bT9_-z0Kv9u9 wallets/wallet.pk
 ```
 
 ### Add node
+Now we need to create folder for certificates that will be used to connect to node:
 ```
 mkdir certs
 cp client server.pub certs
@@ -41,16 +41,16 @@ ton-cli wallet list
 #### Copy configs
 Before running we need to copy config files and adjust them if needed:
 ```
-cp ~/go/src/github.com/mercuryoio/ton-tools/config.json config.json
+cp $GOPATH/src/github.com/mercuryoio/ton-tools/config.json config.json
 ```
 You can connect to any available TON Testnet, we provide two configs.
 For test.ton.org testnet use:
 ```
-cp ~/go/src/github.com/mercuryoio/ton-tools/tonlib.ton.config.json tonlib.config.json
+cp $GOPATH/src/github.com/mercuryoio/ton-tools/tonlib.ton.config.json tonlib.config.json
 ```
 For TCF Testnet:
 ```
-cp ~/go/src/github.com/mercuryoio/ton-tools/tonlib.tcf.config.json tonlib.config.json
+cp $GOPATH/src/github.com/mercuryoio/ton-tools/tonlib.tcf.config.json tonlib.config.json
 ```
 Also, we need configs for lite-client.  
 For test.ton.org:
